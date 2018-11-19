@@ -1,10 +1,1 @@
-logs/*
-node_modules/
-
-src/config/config.development.js
-src/config/config.test.js
-src/config/config.production.js
-config/config.js
-videos/*.mp4
-npm-debug.log
-.jshintrc
+*.mp4

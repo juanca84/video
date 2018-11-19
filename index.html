@@ -1,8 +1,8 @@
 <html lang="en"><head>
   <meta charset="UTF-8">
-  <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111">
-  <title>Ignaci Video Club :)</title>
+  <title>Eliza Video Club :)</title>
       <style>
       body {
   overflow: hidden;
@@ -20,7 +20,6 @@ body:before {
   height: 100%;
   z-index: 10;
 }
-
 canvas {
   opacity: 0;
   -webkit-transition: 1s opacity cubic-bezier(0.55, 0, 0.1, 1);
@@ -29,7 +28,6 @@ canvas {
 canvas.ready {
   opacity: 0.4;
 }
-
 .intro {
   position: absolute;
   padding: 20px;
@@ -54,7 +52,6 @@ canvas.ready {
   letter-spacing: 1px;
   line-height: 24px;
 }
-
     </style>
 
   <script>
@@ -76,50 +73,30 @@ canvas.ready {
   <canvas id="canvas" data-image="http://unsplash.it/g/450/200/?random=1" width="1280" height="81" class="ready"></canvas>
 
   <div class="intro">
-    <h1 > Young Sheldon - Cap 2</h1>
-    <video src="./videos/video2.mp4" id="video" width="800" autoplay controls style="display: block;margin: 20px auto;">
+    <h1 > Las Tres Rosas </h1>
+    <video src="tres_rosas.mp4" id="video" width="800" autoplay controls style="display: block;margin: 20px auto;">
     </video>
   </div>
   </br>
-  <!-- <div class="intro">
-    <h1 > Young Sheldon - Cap 1</h1>
-    <video src="./videos/video1.mp4" id="video" width="800" controls style="display: block;margin: 20px auto;">
-    </video>
-  </div> -->
     <script src="//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
-
-
     <script>
     (function() {
   var Photo, addListeners, canvas, createGrid, ctx, gridItem, grids, height, img, imgInfo, imgSrc, imgs, init, magnet, mouse, populateCanvas, render, resizeCanvas, rotateAndPaintImage, updateMouse, useGrid, width;
-
   canvas = document.getElementById('canvas');
-
   ctx = canvas.getContext('2d');
-
   width = canvas.width = window.innerWidth;
-
   height = canvas.height = window.innerHeight;
-
   imgSrc = canvas.dataset.image;
-
   img = new Image();
-
   useGrid = true;
-
   imgInfo = {};
-
   imgs = [];
-
   grids = [];
-
   magnet = 2000;
-
   mouse = {
     x: 1,
     y: 0
   };
-
   init = function() {
     addListeners();
     img.onload = function(e) {
@@ -136,23 +113,19 @@ canvas.ready {
     };
     return img.src = imgSrc;
   };
-
   addListeners = function() {
     window.addEventListener('resize', resizeCanvas);
     window.addEventListener('mousemove', updateMouse);
     return window.addEventListener('touchmove', updateMouse);
   };
-
   updateMouse = function(e) {
     mouse.x = e.clientX;
     return mouse.y = e.clientY;
   };
-
   resizeCanvas = function() {
     width = canvas.width = window.innerWidth;
     return height = canvas.height = window.innerHeight;
   };
-
   populateCanvas = function(nb) {
     var i, p, results;
     i = 0;
@@ -164,7 +137,6 @@ canvas.ready {
     }
     return results;
   };
-
   createGrid = function() {
     var c, grid, i, imgScale, item, j, k, l, r, ref, ref1, ref2, results, x, y;
     imgScale = 0.5;
@@ -188,7 +160,6 @@ canvas.ready {
     }
     return results;
   };
-
   gridItem = function(x, y, w, h) {
     if (x == null) {
       x = 0;
@@ -200,7 +171,6 @@ canvas.ready {
       ctx.drawImage(img, x, y, w, h);
     };
   };
-
   Photo = function() {
     var TO_RADIANS, finalX, finalY, forceX, forceY, h, r, seed, w, x, y;
     seed = Math.random() * (2.5 - 0.7) + 0.7;
@@ -235,7 +205,6 @@ canvas.ready {
       return rotateAndPaintImage(ctx, img, r * TO_RADIANS, x, y, w / 2, h / 2, w, h);
     };
   };
-
   rotateAndPaintImage = function(context, image, angle, positionX, positionY, axisX, axisY, widthX, widthY) {
     context.translate(positionX, positionY);
     context.rotate(angle);
@@ -243,7 +212,6 @@ canvas.ready {
     context.rotate(-angle);
     return context.translate(-positionX, -positionY);
   };
-
   render = function() {
     var x, y;
     x = 0;
@@ -260,9 +228,7 @@ canvas.ready {
     }
     return requestAnimationFrame(render);
   };
-
   init();
-
 }).call(this);
   //# sourceURL=pen.js
   </script>
